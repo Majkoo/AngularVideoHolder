@@ -1,0 +1,10 @@
+<footer class="bg-dark py-3 mt-auto shadow">
+  <div class="container d-flex flex-column justify-content-center align-items-center gap text-white">
+    <p *ngFor="let paragraph of footerContent.paragraphs">
+      {{paragraph}}
+    </p>
+    <div class="d-flex gap justify-content-center align-items-center">
+      <a *ngFor="let link of footerContent.links" href="{{link.href}}" target="_blank">{{link.text}}</a>
+    </div>
+  </div>
+</footer>

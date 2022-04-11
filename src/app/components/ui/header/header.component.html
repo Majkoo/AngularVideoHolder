@@ -1,0 +1,22 @@
+<header class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mb-4 shadow">
+  <nav class="container">
+    <a class="navbar-brand fw-bold d-flex justify-content-center align-items-center header-gap"
+       id="navbar-title" (click)="onHomeClickSubmit()">
+      <img src="./assets/icons/title-icon.svg" alt="{{headerContent.title}}" class="title-icon">
+      <span>{{headerContent.title}}</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <form class="d-flex input-group search-form" id="search-form">
+        <input class="form-control" id="search-bar" type="search" [(ngModel)]="searchPhrase" name="searchPhrase"
+               placeholder="{{headerContent.searchBarPlaceholder}}" aria-label="Search">
+        <button type="submit" (click)="onSearchSubmit(searchPhrase)" [disabled]="!searchPhrase"
+                class="btn btn-primary d-flex justify-content-center align-items-center">
+          <img src="./assets/icons/search-icon.svg" alt="{{headerContent.searchBarPlaceholder}}" class="search-icon">
+        </button>
+      </form>
+    </div>
+  </nav>
+</header>

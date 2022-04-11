@@ -1,0 +1,13 @@
+[
+  {
+    "type": "video",
+    "title": "Lorem ipsum video",
+    "description": "Lorem ipsum dolor sit amet...",
+    "src": "./assets/videos/ship-placeholder.mp4"
+  },
+  {
+    "type": "image",
+    "title": "Lorem ipsum image",
+    "src": "./assets/images/placeholderLorem.jpg"
+  }
+]

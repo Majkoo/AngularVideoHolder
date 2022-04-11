@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "title": "Video Holder",
+    "searchBarPlaceholder": "Search"
+  },
+  "footer" : {
+    "paragraphs": [
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, veritatis!"
+    ],
+    "links": [
+      {
+        "text": "https://migra.ml",
+        "href": "https://migra.ml"
+      }
+    ]
+  }
+}

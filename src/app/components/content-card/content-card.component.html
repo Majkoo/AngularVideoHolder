@@ -1,0 +1,38 @@
+<div class="card" *ngIf="item.title && item.type && item.src">
+
+      <h5 class="title border-bottom">{{item.title}}</h5>
+      <div class="item">
+
+        <div *ngIf="item.type === 'video' && !isEmbedVideo">
+          <video controls>
+            <source [src]="safeUrl" type="video/mp4">
+          </video>
+        </div>
+
+        <div *ngIf="item.type === 'video' && isEmbedVideo">
+          <iframe [src]="safeUrl"></iframe>
+        </div>
+
+        <div *ngIf="item.type === 'image'" class="img-container">
+          <div class="hover-img-container">
+            <img [src]="safeUrl" alt="{{item.title}}" title="{{item.title}}" (click)="showFullscreen = true" class="hover">
+            <div class="show-icon">
+              <img src="./assets/icons/image-hover.svg" alt="{{item.title}} fullscreen">
+            </div>
+          </div>
+            <p-dialog [modal]="true" [dismissableMask]="true" [blockScroll]="true" [showHeader]="false" [closeOnEscape]="true" [(visible)]="showFullscreen">
+              <img [src]="safeUrl" alt="{{item.title}}" title="{{item.title}}">
+            </p-dialog>
+        </div>
+
+      </div>
+      <div class="body">
+        <p class="text">{{item.description ? item.description : item.title}}</p>
+      </div>
+
+</div>
+<div class="card d-flex justify-content-center align-items-center p-3"
+     *ngIf="!(item.title && item.type && item.src)">
+  <p class="text-danger text-center">Nieprawidłowo zamieszczony zasób</p>
+</div>
+

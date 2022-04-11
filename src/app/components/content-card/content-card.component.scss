@@ -1,0 +1,53 @@
+.card {
+  background-color: #f8f8f8;
+  .title {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    height: 2.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    text-wrap: normal;
+    word-break: break-word;
+  }
+  img, iframe, video {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .img-container {
+    margin-bottom: 6px;
+    .hover-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img.hover {
+        transition: ease 500ms;
+        &:hover {
+          filter: blur(2px) brightness(60%);
+        }
+      }
+      .show-icon {
+        position: absolute;
+        transition: ease 500ms;
+        opacity: 0;
+        z-index: 10;
+        img {
+          width: 4rem;
+        }
+      }
+    }
+    .hover-img-container:hover .show-icon {
+      opacity: 1;
+    }
+  }
+
+  .body {
+    padding: 0.5rem 1rem;
+    height: 150px;
+    overflow: auto;
+  }
+}
+.hover-icon {
+  width: 2rem;
+}
+
+
