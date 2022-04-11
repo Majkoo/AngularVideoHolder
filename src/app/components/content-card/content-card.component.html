@@ -10,7 +10,7 @@
         </div>
 
         <div *ngIf="item.type === 'video' && isEmbedVideo">
-          <iframe [src]="safeUrl"></iframe>
+          <iframe [src]="safeUrl" allowfullscreen></iframe>
         </div>
 
         <div *ngIf="item.type === 'image'" class="img-container">

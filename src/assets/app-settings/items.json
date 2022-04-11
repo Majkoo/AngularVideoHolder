@@ -8,6 +8,31 @@
   {
     "type": "image",
     "title": "Lorem ipsum image",
+    "description": "Lorem ipsum image",
     "src": "./assets/images/placeholderLorem.jpg"
+  },
+  {
+    "type": "video",
+    "title": "Placeholder video",
+    "description": "This is a sample video, posted here using local source path",
+    "src": "./assets/videos/placeholder.mp4"
+  },
+  {
+    "type": "video",
+    "title": "Placeholder YouTube video",
+    "description": "This is a sample video, posted here using YouTube embed link",
+    "src": "https://www.youtube.com/embed/u31qwQUeGuM"
+  },
+  {
+    "type": "image",
+    "title": "Placeholder Image, local path",
+    "description": "Placeholder Image, local path",
+    "src": "./assets/images/placeholder.jpg"
+  },
+  {
+    "type": "image",
+    "title": "Placeholder Image, embed via link",
+    "description": "Placeholder Image, embed via link",
+    "src": "https://pictures-api.migra.ml/wwwroot/pictures/placehold-img1.jpg"
   }
 ]

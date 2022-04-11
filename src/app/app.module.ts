@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {DialogModule} from "primeng/dialog";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ButtonModule} from "primeng/button";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ButtonModule} from "primeng/button";
     BrowserAnimationsModule,
     FormsModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule
 
   ],
   providers: [],
