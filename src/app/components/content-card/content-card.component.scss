@@ -17,26 +17,26 @@
     margin-bottom: 6px;
     .hover-img-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      img.hover {
-        transition: ease 500ms;
-        &:hover {
-          filter: blur(2px) brightness(60%);
-        }
-      }
-      .show-icon {
+      .img-hover-backdrop {
         position: absolute;
+        display: flex;
         transition: ease 500ms;
         opacity: 0;
+        width: 100%;
+        aspect-ratio: 16/9;
         z-index: 10;
+        justify-content: center;
+        align-items: center;
         img {
-          width: 4rem;
+          width: 36px;
+          aspect-ratio: 1/1;
+        }
+        &:hover {
+          opacity: 1;
+          background-color: rgba(0, 0, 0, 0.5);
         }
       }
-    }
-    .hover-img-container:hover .show-icon {
-      opacity: 1;
+
     }
   }
 

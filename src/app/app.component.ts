@@ -1,9 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AppSettingsModel} from "./models/AppSettingsModel";
-
-import AppSettings from "../assets/app-settings/settings.json";
-import Items from "../assets/app-settings/items.json";
-import UiContent from "../assets/app-settings/ui-content.json";
 import {ItemModel} from "./models/ItemModel";
 import {UiContentModel} from "./models/uiContent/UiContentModel";
 import {HttpClient} from "@angular/common/http";
@@ -38,11 +34,19 @@ export class AppComponent {
     });
   }
 
-  filterItems(val: string) {
-    this.items = Items.filter(i => i.title.toLowerCase().includes(val.toLowerCase()));
+  filterItems(searchPhrase: string) {
+    this.http.get<ItemModel[]>('../assets/app-settings/items.json').subscribe({
+      next: (val: ItemModel[]) => {
+        this.items = val.filter(i => i.title.toLowerCase().includes(searchPhrase.toLowerCase()));
+      }
+    });
   }
   resetItems() {
-    this.items = Items;
+    this.http.get<ItemModel[]>('../assets/app-settings/items.json').subscribe({
+      next: (val: ItemModel[]) => {
+        this.items = val;
+      }
+    });
   }
 
 
